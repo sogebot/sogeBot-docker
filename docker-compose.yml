@@ -1,0 +1,15 @@
+
+version: "3.3"
+
+services:
+  sogebot:
+    # release
+    image: docker.pkg.github.com/sogehige/sogebot/release:latest
+    restart: always
+    volumes:
+      - ./conf:/app/conf/
+    ports:
+      - 20000:20000 # change your output port
+    environment:
+      # ensure locale exists in container, you may need to install it
+      LANG: en_US.UTF-8
