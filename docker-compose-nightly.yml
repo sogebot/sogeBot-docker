@@ -1,4 +1,3 @@
-
 version: "3.3"
 
 services:
@@ -13,3 +12,10 @@ services:
     environment:
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 20002:8080
+
