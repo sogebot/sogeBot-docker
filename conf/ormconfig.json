@@ -1,10 +1,6 @@
 {
-  "type": "postgres",
-  "host": "localhost_wont_work",
-  "port": "5432",
-  "username": "postgres",
-  "password": "postgres",
-  "database": "sogebot",
+  "type": "sqlite",
+  "database": "./shared/sogebot.db",
   "logging": ["error"],
   "cache": true,
   "synchronize": false,
@@ -13,14 +9,14 @@
     "dest/database/entity/*.js"
   ],
   "migrations": [
-    "dest/database/migration/postgres/*.js"
+    "dest/database/migration/sqlite/*.js"
   ],
   "subscribers": [
-    "dest/database/subscriber/*.js"
+    "dest/database/entity/*.js"
   ],
   "cli": {
-    "entitiesDir": "src/bot/database/entity",
-    "migrationsDir": "src/bot/database/migration/postgres",
-    "subscribersDir": "src/bot/database/entity"
+    "entitiesDir": "src/bot/database/entity/",
+    "migrationsDir": "src/bot/database/migration/sqlite/",
+    "subscribersDir": "src/bot/database/entity/"
   }
 }
