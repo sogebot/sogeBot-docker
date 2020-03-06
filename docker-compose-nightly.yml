@@ -8,16 +8,9 @@ services:
       - ./shared:/app/shared/
     ports:
       - 20000:20000 # change your output port
+    env_file:
+      conf/.env
     environment:
-      TYPEORM_CONNECTION: sqlite
-      TYPEORM_DATABASE: ./shared/sogebot.db
-      # DON'T CHANGE ANYTHING BELOW THIS LINE
-      TYPEORM_ENTITIES: dest/database/entity/*.js
-      TYPEORM_MIGRATIONS: dest/database/migration/${TYPEORM_CONNECTION}/*.js
-      TYPEORM_SUBSCRIBERS: dest/database/entity/*.js
-      TYPEORM_ENTITIES_DIR: src/bot/database/entity
-      TYPEORM_MIGRATIONS_DIR: src/bot/database/migration/${TYPEORM_CONNECTION}
-      TYPEORM_SUBSCRIBERS_DIR: src/bot/database/entity
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
 
