@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.2"
 
 services:
   sogebot:
@@ -10,7 +10,7 @@ services:
     ports:
       - 20000:20000 # change your output port
     env_file:
-      conf/.env
+      - ./conf/.env
     environment:
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
