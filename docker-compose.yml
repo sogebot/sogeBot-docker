@@ -3,7 +3,7 @@ version: "3.2"
 services:
   sogebot:
     # release
-    image: docker.pkg.github.com/sogehige/sogebot/release:latest
+    image: sogebot/release:latest
     restart: always
     volumes:
       - ./shared:/app/shared/

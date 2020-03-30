@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   sogebot:
-    image: docker.pkg.github.com/sogehige/sogebot/nightly:latest
+    image: sogebot/nightly:latest
     restart: always
     volumes:
       - ./shared:/app/shared/
