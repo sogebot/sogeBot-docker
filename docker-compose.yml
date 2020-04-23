@@ -7,6 +7,7 @@ services:
     restart: always
     volumes:
       - ./shared:/app/shared/
+      - ./logs:/app/logs/
     ports:
       - 20000:20000 # change your output port
     env_file:
