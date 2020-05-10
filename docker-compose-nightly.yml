@@ -14,6 +14,8 @@ services:
     environment:
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
+      # uncomment if you want to enable CPU profiling
+      # CPUPROFILER: true
 
   adminer:
     image: adminer
