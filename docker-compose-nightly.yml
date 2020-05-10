@@ -9,13 +9,12 @@ services:
       - ./logs:/app/logs/
     ports:
       - 20000:20000 # change your output port
+      - 9229:9229 # cpu profiler port
     env_file:
       - ./conf/.env
     environment:
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
-      # uncomment if you want to enable CPU profiling
-      # CPUPROFILER: "true"
 
   adminer:
     image: adminer
