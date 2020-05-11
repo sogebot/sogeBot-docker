@@ -2,7 +2,6 @@ version: "3.2"
 
 services:
   sogebot:
-    # release
     image: sogebot/release:latest
     restart: always
     volumes:
@@ -10,15 +9,19 @@ services:
       - ./logs:/app/logs/
     ports:
       - 20000:20000 # change your output port
+      #- 9229:9229 # uncomment to use --inspect port
     env_file:
       - ./conf/.env
     environment:
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
+      #NODE_OPTIONS: --max_old_space_size=4096 # uncomment to set max 4GB RAM usage (default 2GB)
+      #DEBUG: y # uncomment to enable --inspect
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 20001:8080
+  ## Uncomment to install adminer
+  #adminer:
+  #  image: adminer
+  #  restart: always
+  #  ports:
+  #    - 20002:8080
 
