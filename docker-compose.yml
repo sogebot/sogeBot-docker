@@ -16,7 +16,7 @@ services:
       # ensure locale exists in container, you may need to install it
       LANG: en_US.UTF-8
       #NODE_OPTIONS: --max_old_space_size=4096 # uncomment to set max 4GB RAM usage (default 2GB)
-      #DEBUG: y # uncomment to enable --inspect
+      #PROFILER: y # uncomment to enable --inspect
 
   ## Uncomment to install adminer
   #adminer:
