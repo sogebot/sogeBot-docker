@@ -18,6 +18,15 @@ services:
       #NODE_OPTIONS: --max_old_space_size=4096 # uncomment to set max 4GB RAM usage (default 2GB)
       #PROFILER: y # uncomment to enable --inspect
 
+  ## Uncomment to install self-hosted dashboard available on port 12345
+  #dashboard:
+  #  container_name: sogeBot-Dashboard
+  #  restart: always
+  #  image: sogebot/dashboard:latest
+  #  ports:
+  #    - "12345:80"
+
+
   ## Uncomment to install adminer
   #adminer:
   #  image: adminer
