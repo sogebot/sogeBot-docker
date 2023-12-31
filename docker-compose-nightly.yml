@@ -26,6 +26,14 @@ services:
   #  ports:
   #    - "12345:80"
 
+  ## Uncomment to start dashboard autoupdater
+  #watchtower:
+  #  restart: always
+  #  image: containrrr/watchtower
+  #  container_name: watchtower
+  #  volumes:
+  #    - /var/run/docker.sock:/var/run/docker.sock
+  #  command: --interval 600 sogeBot-Dashboard
 
   ## Uncomment to install adminer
   #adminer:
